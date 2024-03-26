@@ -842,10 +842,6 @@ STATIC mp_obj_t wiznet5k_active(size_t n_args, const mp_obj_t *args) {
                     mp_hal_get_mac(MP_HAL_MAC_ETH0, mac);
                     setSHAR(mac);
                 }
-
-                // seems we need a small delay after init
-                mp_hal_delay_ms(250);
-
             }
         } else {
             #if WIZNET5K_WITH_LWIP_STACK
